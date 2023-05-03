@@ -1,31 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import './dayPassBooking.scss'
+
 const GuestDetailsDay = () => {
   return (
     <>
       <main
-        style={{
-          display: "flex",
-          marginLeft: "10%",
-          width: "80%",
-          marginBottom: "5rem",
-          marginTop: "5rem",
-        }}
+        className="guestDetail__mainWrapper"
       >
-        <form style={{ width: "100%" }}>
+        <form className="guestDetail__form">
           <div
-            style={{
-              marginBottom: "1rem",
-              display: "flex",
-              flexDirection: "column",
-              marginTop: "3rem",
-            }}
+            className="guestDetail__form--detail-section"
           >
-            <h1 style={{ fontSize: "3rem", fontWeight: 600 }}>
+            <h1 className="guestDetail__form--detail-section-heading">
               Guest(s) Details
             </h1>
-            <p style={{ fontSize: "1rem", fontWeight: 100 }}>
+            <p className="guestDetail__form--detail-section-description" >
               Please select the number of guests you want to book for (infants
               and toddlers included).
               <br />
@@ -40,35 +31,16 @@ const GuestDetailsDay = () => {
             <br />
             <br />
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                  marginRight: "1rem",
-                }}
-              >
-                <input
-                  type="number"
-                  id="distance"
-                  min="0"
-                  max="100"
-                  step="1"
-                  placeholder="No of Guests"
-                  style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
-                    width: "400px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
-                  }}
-                />
-              </div>
+            <div className="guestDetail__form--form-group-1">
+              <input
+                className="std-base-input"
+                type="number"
+                id="distance"
+                min="0"
+                max="100"
+                step="1"
+                placeholder="No of Guests"
+              />
             </div>
 
             {/* this is the part to determine the age of  children */}
@@ -85,6 +57,7 @@ const GuestDetailsDay = () => {
                 }}
               >
                 <input
+                  className="std-base-input"
                   type="text"
                   id="distance"
                   min="0"
@@ -92,15 +65,7 @@ const GuestDetailsDay = () => {
                   step="1"
                   placeholder="First Name"
                   style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
                     width: "350px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
                   }}
                 />
               </div>
@@ -113,6 +78,7 @@ const GuestDetailsDay = () => {
                 }}
               >
                 <input
+                  className="std-base-input"
                   type="text"
                   id="distanceMax"
                   min="0"
@@ -120,15 +86,7 @@ const GuestDetailsDay = () => {
                   step="1"
                   placeholder="Last Name"
                   style={{
-                    boxSizing: "border-box",
-                    height: "60px",
                     width: "350px",
-                    padding: "10px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
                   }}
                 />
               </div>
@@ -147,6 +105,7 @@ const GuestDetailsDay = () => {
                 }}
               >
                 <input
+                  className="std-base-input"
                   type="email"
                   id="distance"
                   min="0"
@@ -154,15 +113,7 @@ const GuestDetailsDay = () => {
                   step="1"
                   placeholder="Email Address"
                   style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
                     width: "350px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
                   }}
                 />
               </div>
@@ -175,6 +126,7 @@ const GuestDetailsDay = () => {
                 }}
               >
                 <input
+                  className="std-base-input"
                   type="text"
                   id="distanceMax"
                   min="0"
@@ -182,15 +134,7 @@ const GuestDetailsDay = () => {
                   step="1"
                   placeholder="Phone Number"
                   style={{
-                    boxSizing: "border-box",
-                    height: "60px",
                     width: "350px",
-                    padding: "10px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
                   }}
                 />
               </div>
@@ -241,17 +185,10 @@ const GuestDetailsDay = () => {
                   marginRight: "1rem",
                 }}
               >
-                 <select
+                <select
+                  className="std-base-input"
                   style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
                     width: "350px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
                   }}
                 >
                   <option value="">Select</option>
@@ -275,19 +212,12 @@ const GuestDetailsDay = () => {
                 }}
               >
                 <input
+                  className="std-base-input"
                   type="date"
                   placeholder="Phone Number"
 
                   style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
                     width: "350px",
-                    border: "1px solid #ccc",
-                    borderRadius: "10px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
                   }}
                 />
               </div>
@@ -318,40 +248,19 @@ const GuestDetailsDay = () => {
               }}
             >
               <Link to='/'>
-              <button
-                className="white_button"
-                style={{
-                  marginRight: "2rem",
-                  marginbottom: "1em",
-                  border: "1",
-
-                  width: "300px",
-                  borderRadius: "5px",
-                  background: "white",
-                  color: "black",
-                }}
-              >
-                Restart Booking
-              </button>
+                <button
+                  className="std-base-button__outline white_button"
+                >
+                  Restart Booking
+                </button>
               </Link>
 
               <Link to='booking-options'>
-
-
-              <button
-                className="black_button1"
-                style={{
-                  marginRight: "2rem",
-                  marginbottom: "1em",
-                  border: "none",
-                  width: "300px",
-                  borderRadius: "5px",
-                  background: "black",
-                  color: "white",
-                }}
-              >
-                Continue
-              </button>
+                <button
+                  className="std-base-button__filled black_button1"
+                >
+                  Continue
+                </button>
               </Link>
             </div>
           </div>
