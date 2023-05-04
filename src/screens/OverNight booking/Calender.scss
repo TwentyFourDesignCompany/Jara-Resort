@@ -1,0 +1,19 @@
+@media only screen and (max-width: 1050px) and (min-width: 320px)  {
+    .c-container{
+        display: block !important;
+    }
+
+    .cs-flex{
+        overflow:scroll !important;
+        display: block !important;
+    }
+
+    .sr-imgBox{
+        display: block !important;
+    }
+
+    .sr-img-div{
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+}

@@ -1,0 +1,26 @@
+.gcn-container{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 870px) and (min-width: 320px)  {
+    .gcn-container, .gcn-cont2 , .gcn-cont3{
+        display: block !important;
+    }
+
+    .gcn-container div, .gcn-cont2 div{
+        margin-right: 0 !important;
+    }
+    .gcn-container div input:nth-child(n), .gcn-cont2 div input:nth-child(n) {
+        width: 100% !important;
+       
+    }
+
+    .gcn-hr{
+        width: 100% !important;
+    }
+
+    .gcn-cont3 a .black_button1{
+        margin-top: 5% !important;
+    }
+}

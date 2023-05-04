@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import './dayPassBooking.scss'
+import './guestDetailDay.scss'
 
 const GuestDetailsDay = () => {
   return (
@@ -47,14 +47,9 @@ const GuestDetailsDay = () => {
 
             <h2> Who is booking ? </h2>
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div class="details-container" >
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                  marginRight: "1rem",
-                }}
+                class="first-box"
               >
                 <input
                   className="std-base-input"
@@ -71,11 +66,7 @@ const GuestDetailsDay = () => {
               </div>
 
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                }}
+                class="second-box"
               >
                 <input
                   className="std-base-input"
@@ -95,14 +86,10 @@ const GuestDetailsDay = () => {
             <br />
             <br />
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div class="details-container" >
               <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                  marginRight: "1rem",
-                }}
+                class="third-box"
+
               >
                 <input
                   className="std-base-input"
@@ -118,12 +105,8 @@ const GuestDetailsDay = () => {
                 />
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                }}
+              <div class="fourth-box"
+
               >
                 <input
                   className="std-base-input"
@@ -145,12 +128,7 @@ const GuestDetailsDay = () => {
 
             <div>
               <hr
-                style={{
-                  float: "left",
-                  clear: "both",
-                  width: "50%",
-                  marginTop: "1rem",
-                }}
+                class="hr-row"
               />
             </div>
 
@@ -158,15 +136,9 @@ const GuestDetailsDay = () => {
             <br />
           </div>
 
-          <div
-            style={{
-              marginBottom: "3rem",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <h1 style={{ fontSize: "3rem", fontWeight: 600 }}>Avilability</h1>
-            <p style={{ fontSize: "1rem", fontWeight: 100 }}>
+          <div class="avail-cont"  >
+            <h1>Avilability</h1>
+            <p >
               Are you booking on a weekday (Monday - Thursday) , weekend (Friday
               - Sunday) or a Seasonal?
             </p>
@@ -176,15 +148,8 @@ const GuestDetailsDay = () => {
             <br />
             <br />
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                  marginRight: "1rem",
-                }}
-              >
+            <div class="avail-box-cont">
+              <div class="avail-box1" >
                 <select
                   className="std-base-input"
                   style={{
@@ -204,12 +169,7 @@ const GuestDetailsDay = () => {
                 </select>
               </div>
 
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                }}
+              <div class="avail-box2"
               >
                 <input
                   className="std-base-input"
@@ -227,25 +187,15 @@ const GuestDetailsDay = () => {
             <br />
 
             <div>
-              <hr
-                style={{
-                  float: "left",
-                  clear: "both",
-                  width: "50%",
-                  marginTop: "1rem",
-                }}
+              <hr class="hr-row"
               />
             </div>
 
             <br />
             <br />
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                marginTop: "2rem",
-              }}
+            <div class="avail-box-cont2"
+
             >
               <Link to='/'>
                 <button

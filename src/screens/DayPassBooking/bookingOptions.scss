@@ -1,0 +1,83 @@
+.bookingOptions-main-wrapper {
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.bookingOptions-form,
+.bookingOptions-formWrapper {
+    width: 100%;
+}
+
+.bookingOptions-formWrapper {
+    display: flex;
+}
+
+.bookingOptions-section1 {
+    display: flex;
+    flex: 2;
+    flex-direction: column
+}
+
+.bookingOptions-sectionHeader {
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.bookingOptions-contentWrapper {
+    margin: 2rem;
+    width: 80%
+}
+
+.bookingOptions-contentWrapper1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bookingOptions-buttonWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.buttonWrapper-minusButton,
+.buttonWrapper-plusButton {
+    font-size: 2rem;
+    color: black;
+    margin: 1rem;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.buttonWrapper-plusButton {
+    background-color: black;
+    color: white;
+}
+
+.bookingOptionBox1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bookingOptionBox2 {
+    margin-top: 2rem;
+    width: 80%;
+    display: flex;
+    margin-left: 2rem
+}
+
+.bookingOptionBox3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.bookingOptionBox4 {
+    display: flex;
+    align-items: center;
+}

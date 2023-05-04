@@ -1,130 +1,55 @@
+import './BookingSummaryDay.scss'
+
 const BookingSummaryDay = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center", flex: 1 }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "100%",
-          marginTop: "3rem",
-          padding: "1rem",
-          borderRadius: "10px",
-        }}
+    <div class="main-cont">
+      <div class="sub-cont"
       >
-        <div
+        <div class="heading"
           style={{
-            margin: "2rem",
+           
           }}
         >
-          <h2
-            style={{
-              textAlign: "center",
-              fontSize: "2rem",
-              margin: "0",
-              fontWeight: "bold",
-            }}
-          >
+          <h2>
             Here is your booking summary:{" "}
           </h2>
         </div>
 
-        <div
-          style={{ display: "flex", justifyContent: "center", width: "40%" }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              backgroundColor: "#F4F1F1",
-              width: "100%",
-              marginTop: "10px",
-              padding: "1rem",
-              height: "80vh",
-              borderRadius: "10px",
-            }}
+        <div class="card-main">
+          <div class="card-sub"
           >
-            <div
-              style={{
-                borderBottom: "1px solid #ccc",
-                width: "100%",
-                marginBottom: "1.5rem",
-                paddingBottom: "0.5rem",
-              }}
+            <div class="sub-head"
             >
-              <h2
-                style={{
-                  textAlign: "center",
-                  fontSize: "1.5rem",
-                  margin: "1.6rem",
-                  fontWeight: "bold",
-                }}
-              >
+              <h2 >
                 Your Reservation
               </h2>
             </div>
-            <div style={{ width: "100%", margin: "1.5rem" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  margin: "0.8rem ",
-                }}
+            <div class="sub-head2">
+              <div class="box1"
               >
                 <span style={{ fontSize: "1.2rem" }}>Guests</span>
                 <span style={{ fontSize: "1.2rem" }}>1 Adult</span>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  margin: "0.8rem ",
-                  paddingTop: "0.5rem",
-                }}
-              >
+              <div class="box2" >
                 <span style={{ fontSize: "1.2rem" }}>Duration</span>
                 <span style={{ fontSize: "1.2rem" }}>1 Night</span>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  margin: "0.8rem ",
-                  paddingTop: "0.5rem",
-                }}
+              <div class="box3"
+               
               >
                 <span style={{ fontSize: "1.2rem" }}>Room</span>
                 <span style={{ fontSize: "1.2rem" }}>Sunset 11</span>
               </div>
             </div>
-            <hr style={{ width: "100%", margin: "1.5rem 0" }} />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
-                margin: "0.8rem",
-              }}
-            >
+            <hr class="hr-row1" />
+            <div class="box4"  >
               <span style={{ fontSize: "1.2rem" }}>SubTotal:</span>
               <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
                 N60,000
               </span>
             </div>
-            <hr style={{ width: "100%", margin: "1.5rem 0" }} />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
-                marginTop: "0.8rem",
-              }}
+            <hr class="hr-row1"  />
+            <div class="box5"
             >
               <span style={{ fontSize: "1.2rem" }}>
                 Consumotion Tax and VAT
@@ -134,15 +59,7 @@ const BookingSummaryDay = () => {
               </span>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
-                marginTop: "0.8rem",
-              }}
-            >
+            <div class="box6"  >
               <span style={{ fontSize: "1.2rem" }}>Total</span>
               <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
                 N67,000{" "}
@@ -151,38 +68,18 @@ const BookingSummaryDay = () => {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            backgroundColor: "#F4F1F1",
-            padding: "1rem",
-            width: "40%",
-            height: "fit-content",
-            borderRadius: "10px",
-            marginBottom: "1rem",
-            fontSize: "1.2rem",
-            marginTop: "3.3rem",
-          }}
-        >
-          <div style={{ margin: "1.6rem" 
-        }}>
-            <label style={{ display: "flex", alignItems: "center" }}>
+        <div class="card-sub2" >
+          <div class="box7" >
+            <label >
               <input
                 type="checkbox"
-                name="termsAndConditions"
-                style={{
-                  marginRight: "0.5rem",
-                  width: "1.5rem",
-                  height: "1.5rem",
-                }}
-              />
+                name="termsAndConditions" />
               <span style={{ marginLeft: "0.5rem" }}>
                 Agree with the booking Terms and Conditions and Proceed to payment 
               </span>
             </label>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div class="box8">
             <input
               type="text"
               style={{
@@ -213,21 +110,7 @@ const BookingSummaryDay = () => {
           </div>
         </div>
 
-        <div
-             style={{
-                display: "flex",
-                flexDirection: "row",
-                padding: "1rem",
-                width: "40%",
-                alignContent: "center",
-                justifyContent: "center",
-                height: "fit-content",
-                borderRadius: "10px",
-                marginBottom: "1rem",
-                fontSize: "1.2rem",
-                marginTop: "3.3rem",
-              }}
-            >
+        <div class="card-sub3" >
               <button
                 className="white_button"
                 style={{

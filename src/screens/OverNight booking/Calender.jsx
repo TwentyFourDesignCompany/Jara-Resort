@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Calender.scss'
 const Calendar = () => {
  
   return (
@@ -14,9 +14,9 @@ const Calendar = () => {
         }}
       >
         <form style={{ width: "100%" }}>
-          <div style={{ display: "flex" }}>
+          <div class="c-container" style={{ display: "flex" }}>
             <div style={{ display: "flex", flex: 2, flexDirection: "column" }}>
-              <div
+              <div class="cs-flex"
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -28,12 +28,11 @@ const Calendar = () => {
 
                   width: "95%",
                   marginRight: "4rem",
+                  // overflow: "scroll",
                 }}
               >
                 <h2
-                  style={{
-                    marginRight: "30rem",
-                  }}
+                  
                 >
                   13th April 2023 13 May 2023
                 </h2>
@@ -1576,7 +1575,7 @@ const Calendar = () => {
                   to your booking
                 </p>
 
-                <div
+                <div 
                   style={{
                     marginTop: "2rem",
                     width: "80%",
@@ -1584,7 +1583,7 @@ const Calendar = () => {
                     marginLeft: "2rem",
                   }}
                 >
-                  <div style={{ display: "flex", flex: "row" }}>
+                  <div class="sr-imgBox" style={{ display: "flex", flex: "row" }}>
                     <div style={{ display: "flex", alignItems: "center" }}>
                       <div
                         style={{
@@ -1679,7 +1678,7 @@ const Calendar = () => {
                       </div>
                     </div>
 
-                    <div style={{ display: "flex", alignItems: "center" }}>
+                    <div class="sr-img-div" style={{ display: "flex", alignItems: "center" }}>
                       <div
                         style={{
                           position: "relative",

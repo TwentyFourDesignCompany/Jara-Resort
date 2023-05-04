@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import './guestcountnight.scss'
+
 const GuestCountNight = () => {
   return (
     <>
@@ -41,7 +44,7 @@ const GuestCountNight = () => {
 
             <h2> How many adults or children (0-17) </h2>
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div class="gcn-container">
               <div
                 style={{
                   display: "flex",
@@ -104,7 +107,7 @@ const GuestCountNight = () => {
 
             <h2> Children's Age </h2>
 
-            <div style={{ display: "flex", flexDirection: "row" }}>
+            <div class="gcn-cont2" style={{ display: "flex", flexDirection: "row" }}>
               <div
                 style={{
                   display: "flex",
@@ -168,7 +171,7 @@ const GuestCountNight = () => {
 
 
             <div>
-              <hr
+              <hr class="gcn-hr"
                 style={{
                   float: "left",
                   clear: "both",
@@ -181,7 +184,7 @@ const GuestCountNight = () => {
             <br />
             <br />
 
-            <div style={{ display: "flex", flexDirection: "row" , marginTop:'2rem'}}>
+            <div class="gcn-cont3" style={{ display: "flex", flexDirection: "row" , marginTop:'2rem'}}>
 
             <Link to="/">
 

@@ -1,0 +1,130 @@
+.guestDetail {
+    &__mainWrapper {
+        display: flex;
+        margin-left: 10%;
+        width: 80%;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+    }
+
+    &__form {
+        width: 100%;
+
+        &--detail-section {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+
+        &--detail-section-heading {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        &--detail-section-description {
+            font-size: 1rem;
+            font-weight: 100;
+        }
+
+        &--form-group-1 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 1rem;
+
+        }
+    }
+}
+
+// Start 04-may-2023
+
+.details-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.first-box,
+.third-box,
+.avail-box1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+
+.second-box,
+.fourth-box,
+.avail-box2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.hr-row {
+    float: left;
+    clear: both;
+    width: 100%;
+    max-width: 50%;
+    margin-top: 1rem,
+}
+
+.avail-cont {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.avail-cont h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.avail-cont p {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.avail-box-cont {
+    display: flex;
+    flex-direction: row;
+}
+
+.avail-box-cont2 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 870px) and (min-width: 320px) {
+    .guestDetail__form--detail-section {
+        overflow: scroll !important;
+    }
+
+    .avail-box-cont,
+    .avail-box-cont2,
+    .details-container {
+        display: block;
+    }
+
+    .std-base-input {
+        width: 100% !important;
+    }
+
+    .first-box,
+    .third-box,
+    .avail-box1 {
+        margin-right: 0;
+    }
+
+    .std-base-button__outline,
+    .std-base-button__filled {
+        width: 100%;
+    }
+
+    .hr-row {
+        max-width: 100%;
+        width: 100%;
+    }
+}
