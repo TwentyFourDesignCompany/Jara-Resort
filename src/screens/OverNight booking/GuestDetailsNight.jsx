@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./GuestDetailsNight.scss"
 const GuestCountNight = () => {
   return (
     <>
@@ -14,7 +15,7 @@ const GuestCountNight = () => {
         }}
       >
         <form style={{ width: "100%" }}>
-          <div style={{ display: "flex" }}>
+          <div class="sr-gdn-cont"style={{ display: "flex" }}>
             <div style={{ flex: 2 }}>
               <h1 style={{ fontSize: "3rem", fontWeight: 600 }}>
                 Guest(s) Details
@@ -29,7 +30,7 @@ const GuestCountNight = () => {
                 with www.jarabeachresort.com/terms
               </p>
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div class="sr-fields" style={{ display: "flex", flexDirection: "row" }}>
                 <div
                   style={{
                     display: "flex",
@@ -91,7 +92,7 @@ const GuestCountNight = () => {
               <br />
               <br />
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div class="sr-fields" style={{ display: "flex", flexDirection: "row" }}>
                 <div
                   style={{
                     display: "flex",
@@ -153,7 +154,7 @@ const GuestCountNight = () => {
               <br />
               <br />
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div class="sr-fields" style={{ display: "flex", flexDirection: "row" }}>
                 <div
                   style={{
                     display: "flex",
@@ -209,7 +210,7 @@ const GuestCountNight = () => {
               <br />
               <br />
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div class="sr-fields" style={{ display: "flex", flexDirection: "row" }}>
                 <div
                   style={{
                     display: "flex",
@@ -246,7 +247,7 @@ const GuestCountNight = () => {
                 <br />- Max: 1 MB
               </h3>
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div class="sr-fields" style={{ display: "flex", flexDirection: "row" }}>
                 <div
                   style={{
                     display: "flex",
@@ -319,7 +320,7 @@ const GuestCountNight = () => {
               <br />
               <br />
 
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div class="sr-fields" style={{ display: "flex", flexDirection: "row" }}>
                 <div
                   style={{
                     display: "flex",
@@ -405,7 +406,7 @@ const GuestCountNight = () => {
               <br />
               <br />
 
-              <div
+              <div class="sr-button-night"
                 style={{
                   display: "flex",
                   flexDirection: "row",

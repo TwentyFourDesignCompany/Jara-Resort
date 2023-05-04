@@ -210,7 +210,7 @@ const BookingOptions = () => {
                   </div>
 
                   <div className="bookingOptionBox4">
-                    <div className="bookingOptionBox5" style={{ position: "relative", width: "100%", marginRight: "1.5rem", cursor: "pointer" }}>
+                    <div className="bookingOptionBox5 sr-extra" style={{ position: "relative", width: "100%", marginRight: "1.5rem", cursor: "pointer" }}>
                       <img src='https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className="bookingOptionImage" style={{ width: "100%", height: "100%", objectFit: "cover" }} alt="activity" />
                       <div className="bookingOptionBox6" style={{ position: "absolute", top: "0", right: "0", backgroundColor: "black", padding: "0.5rem" }}>
                         <h5 className="bookingOptionBox7" style={{ fontStyle: "normal", fontWeight: 400, fontSize: 15.8468, color: "#FFFFFF", margin: 0 }}>
@@ -261,7 +261,7 @@ const BookingOptions = () => {
                   </div>
 
                   <div className="bookingOptionBox4">
-                    <div className="bookingOptionBox5" style={{ position: "relative", width: "100%", marginRight: "1.5rem", cursor: "pointer" }}>
+                    <div className="bookingOptionBox5 sr-extra" style={{ position: "relative", width: "100%", marginRight: "1.5rem", cursor: "pointer" }}>
                       <img src='https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' className="bookingOptionImage" style={{ width: "100%", height: "100%", objectFit: "cover" }} alt="activity" />
                       <div className="bookingOptionBox6" style={{ position: "absolute", top: "0", right: "0", backgroundColor: "black", padding: "0.5rem" }}>
                         <h5 className="bookingOptionBox7" style={{ fontStyle: "normal", fontWeight: 400, fontSize: 15.8468, color: "#FFFFFF", margin: 0 }}>
@@ -286,7 +286,7 @@ const BookingOptions = () => {
 
               </div>
 
-              <div
+              <div className="sr-buttons-sm"
                 style={{
                   display: "flex",
                   flexDirection: "row",
