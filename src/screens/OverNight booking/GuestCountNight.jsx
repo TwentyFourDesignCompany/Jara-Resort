@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import './guestcountnight.scss'
 
 const GuestCountNight = () => {
+  const [childrenCount, setChildrenCount] = useState(0);
+
+  const makeChildrenAgeInputList = () => {
+    const ageInputList = [];
+    for (let i = 0; i < childrenCount; i++) {
+      ageInputList.push(<>
+        <div
+          className="gcn-inputWrapper"
+        >
+          <input
+            type="number"
+            id="distance"
+            min="0"
+            max="17"
+            step="1"
+            placeholder="Age"
+            className="gcn-input"
+          />
+        </div>
+      </>)
+    }
+    return ageInputList;
+  }
+
+  const handleChildrenCount = (e) => {
+    const count = e.target.value;
+    setChildrenCount(count)
+  }
+
   return (
     <>
       <main
@@ -13,7 +42,7 @@ const GuestCountNight = () => {
           width: "80%",
           marginBottom: "5rem",
           marginTop: "5rem",
-          
+
         }}
       >
         <form style={{ width: "100%" }}>
@@ -23,8 +52,8 @@ const GuestCountNight = () => {
               display: "flex",
               flexDirection: "column",
               marginTop: "3rem",
-             
-              
+
+
             }}
           >
             <h1 style={{ fontSize: "3rem", fontWeight: 600 }}>
@@ -60,17 +89,7 @@ const GuestCountNight = () => {
                   max="100"
                   step="1"
                   placeholder="Adults"
-                  style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
-                    width: "350px",
-                    border: "1px solid #ccc",
-                    borderRadius: "7px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
-                  }}
+                  className="gcn-input"
                 />
               </div>
 
@@ -88,6 +107,8 @@ const GuestCountNight = () => {
                   max="100"
                   step="1"
                   placeholder="Children"
+                  value={childrenCount}
+                  onChange={handleChildrenCount}
                   style={{
                     boxSizing: "border-box",
                     height: "60px",
@@ -105,16 +126,15 @@ const GuestCountNight = () => {
 
             {/* this is the part to determine the age of  children */}
 
-            <h2> Children's Age </h2>
+            {
+              childrenCount ? (
+                <>
+                  <h2> Children's Age </h2>
 
-            <div class="gcn-cont2" style={{ display: "flex", flexDirection: "row" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                  marginRight: "1rem",
-                }}
+                  <div class="gcn-cont2" >
+                    {makeChildrenAgeInputList()}
+                    {/* <div
+                className="gcn-inputWrapper"
               >
                 <input
                   type="number"
@@ -123,51 +143,17 @@ const GuestCountNight = () => {
                   max="17"
                   step="1"
                   placeholder="Age"
-                  style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    padding: "10px",
-                    width: "350px",
-                    border: "1px solid #ccc",
-                    borderRadius: "7px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
-                  }}
+                  className="gcn-input"
                 />
-              </div>
+              </div> */}
+                  </div>
+                  <br />
+                  <br />
+                </>
+              ) : null
+            }
 
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                }}
-              >
-                <input
-                  type="number"
-                  id="distanceMax"
-                  min="0"
-                  max="17"
-                  step="1"
-                  placeholder="Age"
-                  style={{
-                    boxSizing: "border-box",
-                    height: "60px",
-                    width: "350px",
-                    padding: "10px",
-                    border: "1px solid #ccc",
-                    borderRadius: "7px",
-                    outline: "none",
-                    fontSize: "16px",
-                    fontFamily: "Arial, sans-serif",
-                  }}
-                />
-              </div>
-            </div>
 
-            <br />
-            <br />
 
 
             <div>
@@ -184,33 +170,36 @@ const GuestCountNight = () => {
             <br />
             <br />
 
-            <div class="gcn-cont3" style={{ display: "flex", flexDirection: "row" , marginTop:'2rem'}}>
+            <div class="gcn-cont3" style={{ display: "flex", flexDirection: "row", marginTop: '2rem' }}>
 
-            <Link to="/">
+              <Link to="/">
 
-            <button className="white_button" style={{marginRight: "2rem",                      
-           marginbottom: '1em' ,
-            border:'1',
-      
-           width:'300px',
-           borderRadius:'5px'
-            , background : 'white'
-            , color:'black'
-           
-           }} >Restart Booking</button>
-           </Link>
+                <button className="white_button" style={{
+                  marginRight: "2rem",
+                  marginbottom: '1em',
+                  border: '1',
 
-           <Link to="guest-details">
-         
-          
-              <button className="black_button1" style={{marginRight: "2rem",                      
-           marginbottom: '1em' ,
-           border:'none',
-           width:'300px',
-           borderRadius:'5px'
-           , background : 'black'
-           , color:'white'}} >Continue</button>
-             </Link>
+                  width: '300px',
+                  borderRadius: '5px'
+                  , background: 'white'
+                  , color: 'black'
+
+                }} >Restart Booking</button>
+              </Link>
+
+              <Link to="guest-details">
+
+
+                <button className="black_button1" style={{
+                  marginRight: "2rem",
+                  marginbottom: '1em',
+                  border: 'none',
+                  width: '300px',
+                  borderRadius: '5px'
+                  , background: 'black'
+                  , color: 'white'
+                }} >Continue</button>
+              </Link>
             </div>
           </div>
         </form>

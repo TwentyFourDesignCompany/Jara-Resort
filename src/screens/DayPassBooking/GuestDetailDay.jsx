@@ -137,7 +137,7 @@ const GuestDetailsDay = () => {
           </div>
 
           <div class="avail-cont"  >
-            <h1>Avilability</h1>
+            <h1>Availability</h1>
             <p >
               Are you booking on a weekday (Monday - Thursday) , weekend (Friday
               - Sunday) or a Seasonal?

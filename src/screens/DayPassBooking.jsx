@@ -12,10 +12,10 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 
 const DayPassBooking = () => {
-    return (
-        <>
-        
-        <div className="components_section">
+  return (
+    <>
+
+      <div className="components_section">
         <div
           data-aos="zoom-out"
           data-aos-delay="50"
@@ -23,23 +23,23 @@ const DayPassBooking = () => {
           style={{ color: "#fff", fontSize: 50, textAlign: "center", lineHeight: 1 }}
           className="hero_heading Raleway"
         >
-        Day-pass Booking
+          DayPass Booking
           <br />
-          
+
         </div>
       </div>
 
       <Outlet />
 
 
-     
 
 
-        <GetTouch />
+
+      <GetTouch />
       <MapView />
-        </>
-        
-    )
+    </>
+
+  )
 }
 
 export default DayPassBooking
