@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./bookingOptions.scss"
+import { DAY_PASS_OPTIONS } from './bookingOptionState'
+import BookingOptionsCounter from "./BookingOptionCounter";
+import BillingCard from './BillingCard'
 
 const BookingOptions = () => {
+  const [bookingOptionsState, setBookingOptionState] = useState(DAY_PASS_OPTIONS);
+
+
+  const handleChangeInOptionsValue = (id, value) => {
+    const stateArray = [...bookingOptionsState]
+    const optionObject = stateArray.find((option) => option.id === id);
+    const updateIndex = stateArray.indexOf(optionObject);
+
+    stateArray.splice(updateIndex, 1, { ...optionObject, quantity: value })
+    const stateObject = JSON.parse(localStorage.getItem('form_state'));
+
+    setBookingOptionState(stateArray)
+    localStorage.setItem("form_state", JSON.stringify({ ...stateObject, day_pass_options: stateArray }))
+  }
+
+  const calculatePrice = (weekendPrice = 0, weekdayPrice = 0) => {
+    const isWeekend = new Date().getDay() === 0 || new Date().getDay() === 6;
+    return isWeekend ? weekendPrice : weekdayPrice;
+  };
+
+  useEffect(() => {
+    console.log('updated ---> ', { bookingOptionsState })
+  }, [bookingOptionsState])
+
   return (
     <>
       <main
@@ -28,29 +55,13 @@ const BookingOptions = () => {
                 >
                   <span style={{ fontSize: "1.2rem" }}>
                     {" "}
-                    Day Pass Infant (Under years are free - no food provided)
+                    Day Pass Infant (Under 2 years are free - no food provided)
                     <br />
                     Non-Seasonal
                     <br />
-                    <span style={{ fontSize: "1.2rem" }}> NGN 0</span>
+                    <span style={{ fontSize: "1.2rem" }}> NGN {calculatePrice(0, 0)}</span>
                   </span>
-
-                  <div
-                    className="bookingOptions-buttonWrapper"
-                  >
-                    <button
-                      className="buttonWrapper-minusButton"
-                    >
-                      -
-                    </button>
-                    <span style={{ fontSize: "1.5rem" }}>0</span>
-
-                    <button
-                      className="buttonWrapper-plusButton"
-                    >
-                      +
-                    </button>
-                  </div>
+                  <BookingOptionsCounter value={0} onChange={(value) => handleChangeInOptionsValue(1, value)} />
                 </div>
                 <hr style={{ width: "100%", margin: "1.5rem 0" }} />
                 <div
@@ -58,29 +69,13 @@ const BookingOptions = () => {
                 >
                   <span style={{ fontSize: "1.2rem" }}>
                     {" "}
-                    Day Pass Infant (Under years are free - no food provided)
+                    Day Pass Child
                     <br />
-                    Non-Seasonal
+                    Aged 6-17 years (or 3 years+ after first FREE Toddler)
                     <br />
-                    <span style={{ fontSize: "1.2rem" }}> NGN 0</span>
+                    <span style={{ fontSize: "1.2rem" }}> NGN {calculatePrice(12500, 10000)}</span>
                   </span>
-
-                  <div
-                    className="bookingOptions-buttonWrapper"
-                  >
-                    <button
-                      className="buttonWrapper-minusButton"
-                    >
-                      -
-                    </button>
-                    <span style={{ fontSize: "1.5rem" }}>0</span>
-
-                    <button
-                      className="buttonWrapper-plusButton"
-                    >
-                      +
-                    </button>
-                  </div>
+                  <BookingOptionsCounter value={0} onChange={(value) => handleChangeInOptionsValue(2, value)} />
                 </div>
                 <hr style={{ width: "100%", margin: "1.5rem 0" }} />
                 <div
@@ -88,29 +83,13 @@ const BookingOptions = () => {
                 >
                   <span style={{ fontSize: "1.2rem" }}>
                     {" "}
-                    Day Pass Infant (Under years are free - no food provided)
+                    Day Pass Nanny
                     <br />
-                    Non-Seasonal
+                    Nanny passes limited to 1 per child, maximum 3 nannies per booking.
                     <br />
-                    <span style={{ fontSize: "1.2rem" }}> NGN 0</span>
+                    <span style={{ fontSize: "1.2rem" }}> NGN {calculatePrice(15000, 12500)}</span>
                   </span>
-
-                  <div
-                    className="bookingOptions-buttonWrapper"
-                  >
-                    <button
-                      className="buttonWrapper-minusButton"
-                    >
-                      -
-                    </button>
-                    <span style={{ fontSize: "1.5rem" }}>0</span>
-
-                    <button
-                      className="buttonWrapper-plusButton"
-                    >
-                      +
-                    </button>
-                  </div>
+                  <BookingOptionsCounter value={0} onChange={(value) => handleChangeInOptionsValue(3, value)} />
                 </div>
                 <hr style={{ width: "100%", margin: "1.5rem 0" }} />
                 <div
@@ -118,29 +97,13 @@ const BookingOptions = () => {
                 >
                   <span style={{ fontSize: "1.2rem" }}>
                     {" "}
-                    Day Pass Infant (Under years are free - no food provided)
+                    Day Pass Adult Non Alcohol
                     <br />
-                    Non-Seasonal
+                    Adult Day Pass w/ Soft Drinks
                     <br />
-                    <span style={{ fontSize: "1.2rem" }}> NGN 0</span>
+                    <span style={{ fontSize: "1.2rem" }}> NGN {calculatePrice(25000, 20000)}</span>
                   </span>
-
-                  <div
-                    className="bookingOptions-buttonWrapper"
-                  >
-                    <button
-                      className="buttonWrapper-minusButton"
-                    >
-                      -
-                    </button>
-                    <span style={{ fontSize: "1.5rem" }}>0</span>
-
-                    <button
-                      className="buttonWrapper-plusButton"
-                    >
-                      +
-                    </button>
-                  </div>
+                  <BookingOptionsCounter value={0} onChange={(value) => handleChangeInOptionsValue(4, value)} />
                 </div>
                 <hr style={{ width: "100%", margin: "1.5rem 0" }} />
                 <div
@@ -148,29 +111,13 @@ const BookingOptions = () => {
                 >
                   <span style={{ fontSize: "1.2rem" }}>
                     {" "}
-                    Day Pass Infant (Under years are free - no food provided)
+                    Day Pass Adult Alcohol
                     <br />
-                    Non-Seasonal
+                    Adult Day Pass including Alcoholic Drinks
                     <br />
-                    <span style={{ fontSize: "1.2rem" }}> NGN 0</span>
+                    <span style={{ fontSize: "1.2rem" }}> NGN {calculatePrice(35000, 30000)}</span>
                   </span>
-
-                  <div
-                    className="bookingOptions-buttonWrapper"
-                  >
-                    <button
-                      className="buttonWrapper-minusButton"
-                    >
-                      -
-                    </button>
-                    <span style={{ fontSize: "1.5rem" }}>0</span>
-
-                    <button
-                      className="buttonWrapper-plusButton"
-                    >
-                      +
-                    </button>
-                  </div>
+                  <BookingOptionsCounter value={0} onChange={(value) => handleChangeInOptionsValue(5, value)} />
                 </div>
                 <hr style={{ width: "100%", margin: "1.5rem 0" }} />
               </div>
@@ -335,123 +282,14 @@ const BookingOptions = () => {
             </div>
 
             <div style={{ display: "flex", justifyContent: "center", flex: 1 }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  backgroundColor: "#F4F1F1",
-                  width: "100%",
-                  marginTop: "10px",
-                  padding: "1rem",
-                  height: "80vh",
-                  borderRadius: "10px",
-                }}
-              >
-                <div
-                  style={{
-                    borderBottom: "1px solid #ccc",
-                    width: "100%",
-                    marginBottom: "1.5rem",
-                    paddingBottom: "0.5rem",
-                  }}
-                >
-                  <h2
-                    style={{
-                      textAlign: "center",
-                      fontSize: "1.5rem",
-                      margin: "1.6rem",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    Your Reservation
-                  </h2>
-                </div>
-                <div style={{ width: "100%", margin: "1.5rem" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      margin: "0.8rem ",
-                    }}
-                  >
-                    <span style={{ fontSize: "1.2rem" }}>Guests</span>
-                    <span style={{ fontSize: "1.2rem" }}>1 Adult</span>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      margin: "0.8rem ",
-                      paddingTop: "0.5rem",
-                    }}
-                  >
-                    <span style={{ fontSize: "1.2rem" }}>Duration</span>
-                    <span style={{ fontSize: "1.2rem" }}>1 Night</span>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      margin: "0.8rem ",
-                      paddingTop: "0.5rem",
-                    }}
-                  >
-                    <span style={{ fontSize: "1.2rem" }}>Room</span>
-                    <span style={{ fontSize: "1.2rem" }}>Sunset 11</span>
-                  </div>
-                </div>
-                <hr style={{ width: "100%", margin: "1.5rem 0" }} />
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                    margin: "0.8rem",
-                  }}
-                >
-                  <span style={{ fontSize: "1.2rem" }}>SubTotal:</span>
-                  <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-                    N60,000
-                  </span>
-                </div>
-                <hr style={{ width: "100%", margin: "1.5rem 0" }} />
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                    marginTop: "0.8rem",
-                  }}
-                >
-                  <span style={{ fontSize: "1.2rem" }}>
-                    Consumotion Tax and VAT
-                  </span>
-                  <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-                    N7,000{" "}
-                  </span>
-                </div>
-
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    width: "100%",
-                    marginTop: "0.8rem",
-                  }}
-                >
-                  <span style={{ fontSize: "1.2rem" }}>Total</span>
-                  <span style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-                    N67,000{" "}
-                  </span>
-                </div>
-              </div>
+              <BillingCard
+                guests={0}
+                duration={0}
+                room={0}
+                subTotal={0}
+                taxAndVAT={0}
+                total={1234567}
+              />
             </div>
           </div>
         </form>

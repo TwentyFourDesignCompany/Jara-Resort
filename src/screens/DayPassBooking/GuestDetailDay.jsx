@@ -3,6 +3,196 @@ import { Link } from "react-router-dom";
 
 import './guestDetailDay.scss'
 
+/**{
+    "guests_no": 4,
+    "guest_first_name": "test",
+    "guest_last_name": "test",
+    "guest_email": "test@yopmail.com",
+    "guest_phone": "1234567890",
+    "booking_date": "2023-05-26T00:00:00.000Z",
+    "option_type": "weekend",
+    "day_pass_options": [
+        {
+            "id": 1,
+            "name": "Day Pass Infant (under 2yrs are free - no food provided)",
+            "description": "Non-Seasonal",
+            "weekday_price": 0,
+            "weekend_price": 0,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-09-25T16:58:41.000000Z",
+            "seasonal_price": 0
+        },
+        {
+            "id": 2,
+            "name": "Day Pass Child",
+            "description": "Aged 6-17 years (or 3 years+ after first FREE Toddler)",
+            "weekday_price": 10000,
+            "weekend_price": 12500,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-07T09:42:26.000000Z",
+            "seasonal_price": 15000
+        },
+        {
+            "id": 3,
+            "name": "Day Pass Nanny",
+            "description": "Nanny passes limited to 1 per child, maximum 3 nannies per booking.",
+            "weekday_price": 12500,
+            "weekend_price": 15000,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-04T21:24:29.000000Z",
+            "seasonal_price": 15000
+        },
+        {
+            "id": 4,
+            "name": "Day Pass Adult Non Alcohol",
+            "description": "Adult Day Pass w/ Soft Drinks",
+            "weekday_price": 20000,
+            "weekend_price": 25000,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-04T21:24:01.000000Z",
+            "seasonal_price": 30000
+        },
+        {
+            "id": 5,
+            "name": "Day Pass Adult Alcohol",
+            "description": "Adult Day Pass including Alcoholic Drinks",
+            "weekday_price": 30000,
+            "weekend_price": 35000,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-04T21:23:53.000000Z",
+            "seasonal_price": 40000
+        }
+    ],
+    "selected_options": [
+        {
+            "id": 1,
+            "name": "Day Pass Infant (under 2yrs are free - no food provided)",
+            "description": "Non-Seasonal",
+            "weekday_price": 0,
+            "weekend_price": 0,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-09-25T16:58:41.000000Z",
+            "seasonal_price": 0,
+            "quantity": 2
+        },
+        {
+            "id": 2,
+            "name": "Day Pass Child",
+            "description": "Aged 6-17 years (or 3 years+ after first FREE Toddler)",
+            "weekday_price": 10000,
+            "weekend_price": 12500,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-07T09:42:26.000000Z",
+            "seasonal_price": 15000,
+            "quantity": 0
+        },
+        {
+            "id": 3,
+            "name": "Day Pass Nanny",
+            "description": "Nanny passes limited to 1 per child, maximum 3 nannies per booking.",
+            "weekday_price": 12500,
+            "weekend_price": 15000,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-04T21:24:29.000000Z",
+            "seasonal_price": 15000,
+            "quantity": 0
+        },
+        {
+            "id": 4,
+            "name": "Day Pass Adult Non Alcohol",
+            "description": "Adult Day Pass w/ Soft Drinks",
+            "weekday_price": 20000,
+            "weekend_price": 25000,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-04T21:24:01.000000Z",
+            "seasonal_price": 30000,
+            "quantity": 0
+        },
+        {
+            "id": 5,
+            "name": "Day Pass Adult Alcohol",
+            "description": "Adult Day Pass including Alcoholic Drinks",
+            "weekday_price": 30000,
+            "weekend_price": 35000,
+            "urgent_charges": 0,
+            "deleted": false,
+            "created_at": "2022-09-22T09:55:13.000000Z",
+            "updated_at": "2022-11-04T21:23:53.000000Z",
+            "seasonal_price": 40000,
+            "quantity": 0
+        }
+    ],
+    "guests_done": true,
+    "availability_done": true,
+    "options_done": true,
+    "extras_done": true,
+    "done_data": {},
+    "extra": "",
+    "showExtra": false,
+    "specials": [
+        "lookout",
+        "massage",
+        "newmassage",
+        "quadbike",
+        "photoshoot",
+        "drinks",
+        "cakes",
+        "roomDecoration",
+        "unforgettableExperience",
+        "domesticStaff"
+    ],
+    "booking": null,
+    "discount": null,
+    "lastUpdate": null,
+    "editMode": false,
+    "editBooking": null,
+    "adminEditMode": false,
+    "fullPageLoader": false,
+    "noDiscountDates": [],
+    "noDayPassBookingDates": [
+        "2022-11-12T23:00:00.000000Z",
+        "2022-11-06T23:00:00.000000Z",
+        "2023-01-08T23:00:00.000000Z",
+        "2023-02-24T23:00:00.000000Z",
+        "2023-01-22T23:00:00.000000Z",
+        "2023-01-23T23:00:00.000000Z",
+        "2023-01-24T23:00:00.000000Z",
+        "2023-02-25T23:00:00.000000Z",
+        "2023-04-02T23:00:00.000000Z",
+        "2023-05-03T23:00:00.000000Z",
+        "2023-05-04T23:00:00.000000Z",
+        "2023-05-05T23:00:00.000000Z",
+        "2023-05-06T23:00:00.000000Z",
+        "2023-05-07T23:00:00.000000Z",
+        "2023-05-08T23:00:00.000000Z",
+        "2023-05-09T23:00:00.000000Z",
+        "2023-05-10T23:00:00.000000Z",
+        "2023-05-11T23:00:00.000000Z",
+        "2023-10-27T23:00:00.000000Z",
+        "2023-04-23T23:00:00.000000Z",
+        "2023-04-24T23:00:00.000000Z",
+        "2023-04-25T23:00:00.000000Z"
+    ]
+} */
+
 const GuestDetailsDay = () => {
   return (
     <>
